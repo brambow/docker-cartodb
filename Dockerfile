@@ -143,7 +143,7 @@ ADD ./config/WS-prod.js \
       /Windshaft-cartodb/config/environments/production.js
 ADD ./config/app_config.yml /cartodb/config/app_config.yml
 ADD ./config/database.yml /cartodb/config/database.yml
-ADD ./config/grunt_production.json /cartodb/config/grunt_production.json
+ADD ./config/grunt_true.json /cartodb/config/grunt_true.json
 
 RUN locale-gen en_US.UTF-8
 ENV LANG en_US.UTF-8
