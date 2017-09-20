@@ -1,6 +1,8 @@
 {
-  "production":{
-    "use_minify": true,
-    "http_path_prefix": "//cartodb-libs.global.ssl.fastly.net/cartodbui"
+  "environment": {
+    "production": {
+      "use_minify": true,
+      "http_path_prefix": "//cartodb-libs.global.ssl.fastly.net/cartodbui"
+    }
   }
 }
