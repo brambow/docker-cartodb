@@ -143,7 +143,7 @@ ADD ./config/WS-prod.js \
       /Windshaft-cartodb/config/environments/production.js
 ADD ./config/app_config.yml /cartodb/config/app_config.yml
 ADD ./config/database.yml /cartodb/config/database.yml
-ADD ./config/grunt_true.json /cartodb/config/grunt_true.json
+ADD ./config/grunt_production.json /cartodb/config/grunt_production.json
 
 RUN locale-gen en_US.UTF-8
 ENV LANG en_US.UTF-8
@@ -154,7 +154,7 @@ ENV LC_ALL en_US.UTF-8
 RUN cd cartodb &&\
     export PATH=$PATH:$PWD/node_modules/grunt-cli/bin &&\
     bundle install &&\
-    bundle exec grunt 
+    bundle exec grunt --environment production
 
 RUN service postgresql start && service redis-server start &&\
     cd cartodb &&\
